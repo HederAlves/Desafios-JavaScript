@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Inversor | Palavras</title>
+</head>
+<body>
+
+	<label>Inversor De Palavras</label>
+	<input class="inputInversor" type="text" name="inversor" placeholder="Digite a Palavra">
+	<button onclick="inverter();">Inverter</button>
+	<span data-saida-resultado></span>
+
+<script type="text/javascript">
+
+	var palavra;
+	var resultado = document.querySelector('[data-saida-resultado]');
+	
+	function inverter(palavra) {
+		palavra = document.querySelector(".inputInversor").value;
+	 	var palavraInversa = palavra.split('').reverse().join('');
+		resultado.innerHTML = palavraInversa;
+	}
+
+</script>
+</body>
+</html>
